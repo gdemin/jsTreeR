@@ -19,6 +19,7 @@ jstree(
   sort = FALSE,
   unique = FALSE,
   wholerow = FALSE,
+  three_state = TRUE,
   contextMenu = FALSE,
   checkCallback = NULL,
   grid = NULL,
@@ -27,9 +28,8 @@ jstree(
 )
 }
 \arguments{
-\item{nodes}{data, a list of nodes; each node is a list with a required
-field \code{text}, a character string labeling the node, and optional
-fields
+\item{nodes}{data, a list of nodes; each node is a list with a required field
+\code{text}, a character string labeling the node, and optional fields
 \describe{
   \item{\code{children}}{
     a list of nodes
@@ -81,10 +81,13 @@ fields
     \code{list(title = "I'm a tooltip", style = "background-color: pink;")}
   }
 }
-There are some alternatives for the \code{nodes} argument;
-see \href{https://github.com/vakata/jstree/wiki#populating-the-tree-using-ajax}{Populating the tree using AJAX},
-\href{https://github.com/vakata/jstree/wiki#populating-the-tree-using-ajax-and-lazy-loading-nodes}{Populating the tree using AJAX and lazy loading nodes}
-and \href{https://github.com/vakata/jstree/wiki#populating-the-tree-using-a-callback-function}{Populating the tree using a callback function}.}
+There are some alternatives for the \code{nodes} argument; see
+\href{https://github.com/vakata/jstree/wiki#populating-the-tree-using-ajax}{Populating
+the tree using AJAX},
+\href{https://github.com/vakata/jstree/wiki#populating-the-tree-using-ajax-and-lazy-loading-nodes}{Populating
+the tree using AJAX and lazy loading nodes} and
+\href{https://github.com/vakata/jstree/wiki#populating-the-tree-using-a-callback-function}{Populating
+the tree using a callback function}.}
 
 \item{elementId}{a HTML id for the widget (useless for common usage)}
 
@@ -100,9 +103,9 @@ clicking on the text of a node}
 \item{search}{either a logical value, whether to enable the search
 functionality with default options, or a named list of options for the
 search functionality; see the \emph{SuperTinyIcons}
-\link[jsTreeR:jstreeExample]{Shiny example}
-and the \href{https://www.jstree.com/api/}{jsTree API documentation} for
-the list of possible options}
+\link[jsTreeR:jstreeExample]{Shiny example} and the
+\href{https://www.jstree.com/api/}{jsTree API documentation} for the list
+of possible options}
 
 \item{searchtime}{currently ignored}
 
@@ -125,23 +128,25 @@ of possible options}
 
 \item{wholerow}{logical, whether to highlight whole selected rows}
 
+\item{three_state}{logical, indicating if checkboxes should cascade down and
+have an undetermined state. Defaults to true}
+
 \item{contextMenu}{either a logical value, whether to enable a context menu
-to create/rename/delete/cut/copy/paste nodes, or a list of options; see
-the \href{https://www.jstree.com/api/}{jsTree API documentation} for the
+to create/rename/delete/cut/copy/paste nodes, or a list of options; see the
+\href{https://www.jstree.com/api/}{jsTree API documentation} for the
 possible options}
 
-\item{checkCallback}{either \code{TRUE} to allow to perform some actions
-such as creating a new node, or a JavaScript function; see the example
-where this option is used to define restrictions on the drag-and-drop
-behavior}
+\item{checkCallback}{either \code{TRUE} to allow to perform some actions such
+as creating a new node, or a JavaScript function; see the example where
+this option is used to define restrictions on the drag-and-drop behavior}
 
 \item{grid}{list of settings for the grid; see the second example, the
 \emph{grid} \link[jsTreeR:jstreeExample]{Shiny example}, and the web page
 \href{https://github.com/deitch/jstree-grid/#options}{github.com/deitch/jstree-grid}
 for the list of all available options}
 
-\item{theme}{jsTree theme, one of \code{"default"},
-\code{"default-dark"}, or \code{"proton"}}
+\item{theme}{jsTree theme, one of \code{"default"}, \code{"default-dark"}, or
+\code{"proton"}}
 
 \item{coreOptions}{a named list of core options, for advanced usage}
 }
