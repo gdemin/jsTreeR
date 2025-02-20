@@ -236,8 +236,8 @@ HTMLWidgets.widget({
             keep_selected_style: !x.checkWithText,
             cascade_to_disabled: false,
             tie_selection: x.checkWithText,
-            whole_node: x.checkWithText
-            //three_state: false,
+            whole_node: x.checkWithText,
+            three_state: x.three_state
             //cascade: "up+undetermined"
           };
 
